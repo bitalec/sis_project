@@ -1,0 +1,13 @@
+.model REGCLOCK5
+.inputs A4 A3 A2 A1 A0 CLOCK
+.outputs O4 O3 O2 O1 O0 
+
+.subckt REGCLOCK A=A4 CLOCK=CLOCK O=O4 
+.subckt REGCLOCK A=A3 CLOCK=CLOCK O=O3 
+.subckt REGCLOCK A=A2 CLOCK=CLOCK O=O2 
+.subckt REGCLOCK A=A1 CLOCK=CLOCK O=O1 
+.subckt REGCLOCK A=A0 CLOCK=CLOCK O=O0 
+
+.search regclock.blif
+
+.end

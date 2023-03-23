@@ -1,0 +1,9 @@
+.model AND5
+.inputs A B C D E
+.outputs O
+
+.names A B C D E O
+11111 1
+
+.end
+

@@ -1,0 +1,93 @@
+.model FSM
+.inputs IN4 IN3 IN2 IN1 IN0 FINEINIT
+.outputs RESETDATA SETTORE_NON_VALIDO RESETSBARRA BYPASS
+.latch    [14] LatchOut_v6   0
+.latch    [15] LatchOut_v7   0
+.start_kiss
+.i 6
+.o 4
+.p 17
+.s 3
+.r SPENTO
+0----- SPENTO SPENTO 1001
+-0---- SPENTO SPENTO 1001
+--0--- SPENTO SPENTO 1001
+---0-- SPENTO SPENTO 1001
+----0- SPENTO SPENTO 1001
+11111- SPENTO INIT 0000
+-----0 INIT INIT 0000
+-----1 INIT STAN 1000
+--100- STAN STAN 1010
+--010- STAN STAN 1010
+--001- STAN STAN 1010
+1-000- STAN STAN 1110
+-1000- STAN STAN 1110
+--011- STAN STAN 1110
+--101- STAN STAN 1110
+--11-- STAN STAN 1110
+00000- STAN SPENTO 1001
+.end_kiss
+.latch_order LatchOut_v6 LatchOut_v7
+.code SPENTO 00
+.code INIT 11
+.code STAN 01
+.names IN4 IN3 IN2 IN1 IN0 FINEINIT LatchOut_v6 LatchOut_v7 [14]
+-----01- 1
+11111--0 1
+.names IN4 IN3 IN2 IN1 IN0 FINEINIT LatchOut_v6 LatchOut_v7 [15]
+-----11- 1
+-----01- 1
+--1---01 1
+---1--01 1
+----1-01 1
+1-000-01 1
+-1000-01 1
+11111--0 1
+.names IN4 IN3 IN2 IN1 IN0 FINEINIT LatchOut_v6 LatchOut_v7 RESETDATA
+-----11- 1
+0------0 1
+-0-----0 1
+--0----0 1
+---0---0 1
+----0--0 1
+--1---01 1
+---1--01 1
+----1-01 1
+00000-0- 1
+1-000-01 1
+-1000-01 1
+.names IN4 IN3 IN2 IN1 IN0 LatchOut_v6 LatchOut_v7 SETTORE_NON_VALIDO
+--11-01 1
+--1-101 1
+---1101 1
+1-00001 1
+-100001 1
+.names IN4 IN3 IN2 IN1 IN0 LatchOut_v6 LatchOut_v7 RESETSBARRA
+--1--01 1
+---1-01 1
+----101 1
+1-00001 1
+-100001 1
+.names IN4 IN3 IN2 IN1 IN0 LatchOut_v6 LatchOut_v7 BYPASS
+0-----0 1
+-0----0 1
+--0---0 1
+---0--0 1
+----0-0 1
+000000- 1
+.exdc 
+.inputs IN4 IN3 IN2 IN1 IN0 FINEINIT LatchOut_v6 LatchOut_v7
+.outputs [14] [15] RESETDATA SETTORE_NON_VALIDO RESETSBARRA BYPASS
+.names LatchOut_v6 LatchOut_v7 [14]
+10 1
+.names LatchOut_v6 LatchOut_v7 [15]
+10 1
+.names LatchOut_v6 LatchOut_v7 RESETDATA
+10 1
+.names LatchOut_v6 LatchOut_v7 SETTORE_NON_VALIDO
+10 1
+.names LatchOut_v6 LatchOut_v7 RESETSBARRA
+10 1
+.names LatchOut_v6 LatchOut_v7 BYPASS
+10 1
+.end

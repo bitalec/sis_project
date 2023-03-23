@@ -1,0 +1,11 @@
+.model CLOCK1
+.inputs A B C D E
+.outputs CLOCK1
+
+.names A B C D E CLOCK1 
+----1 1
+11000 1
+10000 1
+01000 1
+
+.end

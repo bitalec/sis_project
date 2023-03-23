@@ -1,0 +1,7 @@
+.model REGCLOCK1
+.inputs A CLOCK
+.outputs O
+
+.latch A O re CLOCK 1
+.end
+

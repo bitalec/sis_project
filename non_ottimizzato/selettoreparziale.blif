@@ -1,0 +1,14 @@
+.model SELETTOREPARZIALE
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs SELECTORLMUXP1
+
+.names A4 A3 A2 A1 A0 o1
+11111 1
+.names B4 B3 B2 B1 B0 o2
+00000 1
+
+.names o1 o2 SELECTORLMUXP1
+11 1
+
+.end
+

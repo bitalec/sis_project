@@ -1,0 +1,21 @@
+.model CONSTSELECTOR1
+.inputs  S1 S0 S
+.outputs O4 O3 O2 O1 O0
+
+.names S1 S0 S O4
+101 1 
+
+.names S1 S0 S O3
+101 1
+
+.names S1 S0 S O2
+101 1
+
+.names S1 S0 S O1
+101 1
+
+.names S1 S0 S O0
+011 1
+101 1
+
+.end

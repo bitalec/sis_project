@@ -1,0 +1,8 @@
+.model NOR5
+.inputs A B C D E
+.outputs O
+
+.names A B C D E O
+00000 1
+
+.end

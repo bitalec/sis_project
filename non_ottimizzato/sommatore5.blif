@@ -1,0 +1,12 @@
+.model SOMMATORE5
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0 CIN
+.outputs O4 O3 O2 O1 O0 COUT
+
+.subckt SOMMATORE1 A=A0 B=B0 CIN=CIN O=O0 COUT=co0
+.subckt SOMMATORE1 A=A1 B=B1 CIN=co0 O=O1 COUT=co1
+.subckt SOMMATORE1 A=A2 B=B2 CIN=co1 O=O2 COUT=co2
+.subckt SOMMATORE1 A=A3 B=B3 CIN=co2 O=O3 COUT=co3
+.subckt SOMMATORE1 A=A4 B=B4 CIN=co3 O=O4 COUT=COUT
+
+.search sommatore1.blif
+.end
